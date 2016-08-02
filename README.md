@@ -575,10 +575,10 @@ You can check `halted?` and `halted_because` values later.
 The whole event sequence is as follows:
 
 * `before_transition`
-* event specific action
+* event specific action (i.e. your own method named for the event)
 * `on_transition` (if action did not halt)
 * `on_exit`
-* PERSIST WORKFLOW STATE, i.e. transition
+* `persist_workflow_state`, i.e. transition
 * `on_entry`
 * `after_transition`
 
